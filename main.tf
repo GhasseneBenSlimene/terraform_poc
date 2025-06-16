@@ -1,9 +1,9 @@
 terraform {
   cloud {
-    organization = "ghassene_terrafrom_poc"
+    organization = "ghassene_terraform_cloud"
 
     workspaces {
-      name = "terraform-poc-cloud"
+      name = "terraform_poc"
     }
   }
 
