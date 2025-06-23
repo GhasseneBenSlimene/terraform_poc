@@ -22,9 +22,4 @@ provider "aws" {
 resource "aws_s3_bucket" "ghassene_bucket" {
   bucket = "ghassene-terraform-poc-bucket"
   acl    = "private"
-
-  tags = {
-    Name        = "TerraformS3POC"
-    Environment = "Dev"
-  }
 }
