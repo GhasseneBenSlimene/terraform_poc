@@ -8,15 +8,23 @@ terraform {
   }
 
   required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
     }
   }
 }
 
-provider "random" {}
+provider "aws" {
+  region = "eu-west-1"
+}
 
-resource "random_pet" "name" {
-  length = 3
+resource "aws_s3_bucket" "ghassene_bucket" {
+  bucket = "ghassene-terraform-poc-bucket"
+  acl    = "private"
+
+  tags = {
+    Name        = "TerraformS3POC"
+    Environment = "Dev"
+  }
 }
