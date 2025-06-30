@@ -18,8 +18,3 @@ terraform {
 provider "aws" {
   region = "eu-west-1"
 }
-
-resource "aws_s3_bucket" "ghassene_bucket" {
-  bucket = "ghassene-terraform-poc-bucket-1"
-  acl    = "private"
-}
