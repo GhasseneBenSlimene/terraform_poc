@@ -20,6 +20,6 @@ resource "aws_instance" "web" {
   subnet_id     = aws_subnet.public.id
 
   tags = {
-    Name = "ghassene-instance"
+    Name = "ghassene-bs-instance"
   }
 }
